@@ -1,0 +1,59 @@
+[[rulesets]]
+group = "🎯 Direct"
+ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Lan/Lan.list"
+
+[[rulesets]]
+group = "🎯 Direct"
+ruleset = "clash-classic:https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
+
+[[rulesets]]
+group = "🌿 AdBlock"
+ruleset = "clash-domain:https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
+
+[[rulesets]]
+group = "🌐 GMedia"
+ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/GlobalMedia/GlobalMedia.list"
+
+[[rulesets]]
+group = "🤖 Ai"
+ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/OpenAI/OpenAI.list"
+
+[[rulesets]]
+group = "🤖 Ai"
+ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Gemini/Gemini.list"
+
+[[rulesets]]
+group = "🤖 Ai"
+ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Claude/Claude.list"
+
+[[rulesets]]
+group = "🤖 Ai"
+ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Copilot/Copilot.list"
+
+[[rulesets]]
+group = "🤖 Ai"
+ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Bing/Bing.list"
+
+[[rulesets]]
+group = "🎭 Proxy"
+ruleset = "clash-domain:https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt"
+
+[[rulesets]]
+group = "🎭 Proxy"
+ruleset = "clash-domain:https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
+
+[[rulesets]]
+group = "🎯 Direct"
+ruleset = "clash-domain:https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+
+[[rulesets]]
+group = "🎯 Direct"
+ruleset = "clash-ipcidr:https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
+
+[[rulesets]]
+group = "🎯 Direct"
+ruleset = "[]GEOIP,CN"
+
+[[rulesets]]
+group = "🌟 Default"
+ruleset = "[]MATCH"

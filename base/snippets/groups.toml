@@ -1,0 +1,29 @@
+[[custom_groups]]
+name = "🎭 Proxy"
+type = "select"
+rule = ["[]DIRECT", ".*"]
+
+[[custom_groups]]
+name = "🌐 GMedia"
+type = "select"
+rule = ["[]🎭 Proxy", ".*"]
+
+[[custom_groups]]
+name = "🤖 Ai"
+type = "select"
+rule = ["[]🎭 Proxy", ".*"]
+
+[[custom_groups]]
+name = "🌿 AdBlock"
+type = "select"
+rule = ["[]REJECT", "[]DIRECT"]
+
+[[custom_groups]]
+name = "🎯 Direct"
+type = "select"
+rule = ["[]DIRECT", "[]🎭 Proxy"]
+
+[[custom_groups]]
+name = "🌟 Default"
+type = "select"
+rule = ["[]🎭 Proxy", "[]DIRECT"]
