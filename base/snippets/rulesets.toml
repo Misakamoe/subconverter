@@ -4,7 +4,7 @@ ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash
 
 [[rulesets]]
 group = "🎯 Direct"
-ruleset = "clash-classic:https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
+ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Direct/Direct.list"
 
 [[rulesets]]
 group = "🌿 AdBlock"
@@ -36,15 +36,15 @@ ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash
 
 [[rulesets]]
 group = "🎭 Proxy"
-ruleset = "clash-domain:https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt"
+ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Google/Google.list"
 
 [[rulesets]]
 group = "🎭 Proxy"
-ruleset = "clash-domain:https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
+ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Proxy/Proxy.list"
 
 [[rulesets]]
 group = "🎯 Direct"
-ruleset = "clash-domain:https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/China/China.list"
 
 [[rulesets]]
 group = "🎯 Direct"
