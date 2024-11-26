@@ -2,28 +2,28 @@
 #define PROXY_H_INCLUDED
 
 #include <string>
+#include <vector>
 
-#include "../../utils/tribool.h"
+#include "utils/tribool.h"
 
 using String = std::string;
+using StringArray = std::vector<String>;
 
-enum ProxyType
+enum class ProxyType
 {
-    Unknow,
+    Unknown,
     Shadowsocks,
     ShadowsocksR,
     VMess,
-    VLESS,
-    Hysteria,
-    Hysteria2,
     Trojan,
     Snell,
     HTTP,
     HTTPS,
-    SOCKS5
+    SOCKS5,
+    WireGuard
 };
 
-inline String getProxyTypeName(int type)
+inline String getProxyTypeName(ProxyType type)
 {
     switch(type)
     {
@@ -33,12 +33,6 @@ inline String getProxyTypeName(int type)
         return "SSR";
     case ProxyType::VMess:
         return "VMess";
-    case ProxyType::VLESS:
-        return "VLESS";
-    case ProxyType::Hysteria:
-        return "Hysteria";
-    case ProxyType::Hysteria2:
-        return "Hysteria2";
     case ProxyType::Trojan:
         return "Trojan";
     case ProxyType::Snell:
@@ -56,7 +50,7 @@ inline String getProxyTypeName(int type)
 
 struct Proxy
 {
-    int Type = ProxyType::Unknow;
+    ProxyType Type = ProxyType::Unknown;
     uint32_t Id = 0;
     uint32_t GroupId = 0;
     String Group;
@@ -79,50 +73,43 @@ struct Proxy
     String FakeType;
     bool TLSSecure = false;
 
-    String Flow;
-    bool FlowShow = false;
-
     String Host;
     String Path;
     String Edge;
 
     String QUICSecure;
     String QUICSecret;
-    String GRPCServiceName;
-    String GRPCMode;
 
     tribool UDP;
-    tribool XUDP;
     tribool TCPFastOpen;
     tribool AllowInsecure;
     tribool TLS13;
 
+    String UnderlyingProxy;
+
     uint16_t SnellVersion = 0;
     String ServerName;
 
-    String Auth;
-    String Alpn;
-    String UpMbps;
-    String DownMbps;
-    String Insecure;
-
-    String Fingerprint;
+    String SelfIP;
+    String SelfIPv6;
     String PublicKey;
-    String ShortId;
-
-    String OBFSPassword;
-
+    String PrivateKey;
+    String PreSharedKey;
+    StringArray DnsServers;
+    uint16_t Mtu = 0;
+    String AllowedIPs = "0.0.0.0/0, ::/0";
+    uint16_t KeepAlive = 0;
+    String TestUrl;
+    String ClientId;
 };
 
 #define SS_DEFAULT_GROUP "SSProvider"
 #define SSR_DEFAULT_GROUP "SSRProvider"
 #define V2RAY_DEFAULT_GROUP "V2RayProvider"
-#define XRAY_DEFAULT_GROUP "XRayProvider"
-#define HYSTERIA_DEFAULT_GROUP "HysteriaProvider"
-#define HYSTERIA2_DEFAULT_GROUP "Hysteria2Provider"
 #define SOCKS_DEFAULT_GROUP "SocksProvider"
 #define HTTP_DEFAULT_GROUP "HTTPProvider"
 #define TROJAN_DEFAULT_GROUP "TrojanProvider"
 #define SNELL_DEFAULT_GROUP "SnellProvider"
+#define WG_DEFAULT_GROUP "WireGuardProvider"
 
 #endif // PROXY_H_INCLUDED
